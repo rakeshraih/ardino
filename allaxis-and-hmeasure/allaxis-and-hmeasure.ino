@@ -76,8 +76,11 @@ void homing(int Dir, int Step, int delay, int limitSwitch, int direction){
 }
 
 void loop() {
+  homing(DirY, StepY, 1000, limitPinY, LOW);
   rightY(150, HIGH, 1000);
-  delay(100000);
+  delay(5000);
+  rightY(150, LOW, 1000);
+  delay(10000000);
 }
 
 void loop1() {

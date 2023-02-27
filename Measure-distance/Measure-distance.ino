@@ -22,11 +22,12 @@ void setup() {
   lox.startRangeContinuous();
 }
 
+
 void loop() {
-    Serial.write(27);       // ESC command
-  //if (lox.isRangeComplete()) {
+  //Serial.write(27);       // ESC command
+  if (lox.isRangeComplete()) {
     Serial.println("Distance in mm: ");
     Serial.println(lox.readRange());
-  //}
-  delay(1000);
+    delay(250);
+  }
 }
